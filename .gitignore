@@ -1,0 +1,8 @@
+/app/static/images/generated/*
+
+*.pyc
+
+__pycache__/
+
+#Cela empêchera les fichiers .pyc et __pycache__/ (générés par vscode) et les images qu’on va générer dans le dossier « /app/static/images/generated / » d’être push sur github. 
+#Ils seront ignorés par git (d’où gitignore). 
