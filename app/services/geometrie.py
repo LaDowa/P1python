@@ -25,7 +25,7 @@ def generer_motif(cotes, profondeur, taille, angle_rotation, couleur):
         x = taille * np.cos(angles)
         y = taille * np.sin(angles) 
         #x et y sont des tableaux contenant les coorodonées de chaque sommet de la forme
-        ax.plot(x, y, color= 'blue') #trace les lignes entre les points(x, y). couleur correspond au paramètre de générer_motif
+        ax.plot(x, y, color= couleur) #trace les lignes entre les points(x, y). couleur correspond au paramètre de générer_motif
 
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S") #chaine de caractères représentant la date et l'heure au moment de l'éxécution du programme. strftime formate ceux-ci tels que:
     # %Y => années (4chiffres entiers) 
@@ -45,5 +45,5 @@ def generer_motif(cotes, profondeur, taille, angle_rotation, couleur):
 
     plt.close () #ferme la figure  Matplotlib pour libérer la mémoire et éviter l'accumulation de figures
 
-    return "static/image/generated/" + nom_fichier
+    return "static/images/generated/" + nom_fichier
     #permet de récupérer le nom du fichier pour l'utiliser ( par Flask).
