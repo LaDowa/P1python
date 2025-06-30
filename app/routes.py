@@ -14,6 +14,7 @@ def generer_motif_route():
         cotes = int(request.form['cotes'])
         profondeur = int(request.form['profondeur'])
         taille = int(request.form['taille'])
+        print(">> Taille reçue :", taille)
         angle_rotation = int(request.form['angle_rotation'])
         couleur = request.form['couleur']
 

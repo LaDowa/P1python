@@ -26,6 +26,8 @@ def generer_motif(cotes, profondeur, taille, angle_rotation, couleur):
         y = taille * np.sin(angles) 
         #x et y sont des tableaux contenant les coorodonées de chaque sommet de la forme
         ax.plot(x, y, color= couleur) #trace les lignes entre les points(x, y). couleur correspond au paramètre de générer_motif
+    ax.set_xlim(-taille * 1.2, taille * 1.2)
+    ax.set_ylim(-taille * 1.2, taille * 1.2)
 
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S") #chaine de caractères représentant la date et l'heure au moment de l'éxécution du programme. strftime formate ceux-ci tels que:
     # %Y => années (4chiffres entiers) 
