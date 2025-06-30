@@ -45,5 +45,5 @@ def generer_motif(cotes, profondeur, taille, angle_rotation, couleur):
 
     plt.close () #ferme la figure  Matplotlib pour libérer la mémoire et éviter l'accumulation de figures
 
-    return "static/images/generated/" + nom_fichier
+    return "/images/generated/" + nom_fichier
     #permet de récupérer le nom du fichier pour l'utiliser ( par Flask).

@@ -18,10 +18,10 @@ def generer_motif_route():
         couleur = request.form['couleur']
 
         #Appeler la fonction generer_motif avec les paramètres reçus:
-        fichier_image = generer_motif(cotes,profondeur,taille,angle_rotation, couleur)
+        fichier_image = generer_motif(cotes, profondeur, taille, angle_rotation, couleur)
 
-        #Renvoie de l'image dans la balise img : 
-        return f"<img src='/{fichier_image}' alt='Motif généré' />"
+        #Anciennement : Renvoie de l'image dans la balise img. Maintenant : Renvoie un template
+        return render_template('generer_motif.html', chemin_image = fichier_image)
     
     except Exception as e: 
         #Gestion des errors; si une erreur se produit, on la stocke dans la variable e et on affiche un message personnalisé
